@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto 2 - HTML, CSS e JS</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./css/admincss.css"
+      media="screen"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  
+<body>
+    <div class="cadastro-container">
+        <h2>Bem-vindo à página do Admin</h2>
+        <form>
+            <label for="nome">Nome do Usuario</label>
+            <input type="text" id="nome" name="nome" required />
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required />
+
+            <div class="container">
+                <button onclick="adicionarUsuario()" type="button">
+                    <div id="btn">Cadastre um novo usuário :D</div>
+                    <div id="svg">
+                        <span class="material-symbols-outlined">send</span>
+                    </div>
+                </button>
+                <button style="display: flex; align-items: center; justify-content: center;" type="button" onclick="limparCampos()">Limpar Campos</button>
+                <button style="display: flex; align-items: center; justify-content: center;" type="button" onclick="excluirTodosUsuarios()">Excluir Todos</button>
+            </div>
+        </form>
+        <div>
+            <label for="pesquisar">Pesquisar Usuários</label>
+            <input type="text" id="pesquisar" placeholder="Pesquisar por nome ou email" />
+            <button style="display: flex; align-items: center; justify-content: center;" type="button" onclick="pesquisarUsuarios()">Pesquisar</button>
+        </div>
+        <div id="usuarios_lista">
+            <h3>Usuarios Criados</h3>
+            <ul id="lista"></ul>
+        </div>
+    </div>
+    
+     <script src="./script/scriptAdm.js"></script>
+</body>
+
+</html>
